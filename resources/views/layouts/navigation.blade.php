@@ -15,6 +15,8 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    {{-- <x-telegram::nav-links/> --}}
                 </div>
             </div>
 
