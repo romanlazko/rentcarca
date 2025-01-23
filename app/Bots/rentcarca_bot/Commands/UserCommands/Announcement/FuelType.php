@@ -31,8 +31,10 @@ class FuelType extends Command
 
         $buttons = BotApi::inlineKeyboard([
             ...$buttons,
-            [array(Back::getTitle('ru'), Back::$command, '')],
-            [array(MenuCommand::getTitle('ru'), MenuCommand::$command, '')],
+            [
+                array(Back::getTitle('ru'), Back::$command, ''),
+                array("Подтвердить", AwaitFeatures::$command, '')
+            ],
         ], 'fuel_type');
 
         $text = implode("\n", [

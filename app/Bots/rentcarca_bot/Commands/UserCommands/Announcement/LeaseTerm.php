@@ -26,8 +26,10 @@ class LeaseTerm extends Command
         $updates->getFrom()->setExpectation(AwaitLeaseTerm::$expectation);
 
         $buttons = BotApi::inlineKeyboard([
-            [array(Back::getTitle('ru'), Back::$command, '')],
-            [array(MenuCommand::getTitle('ru'), MenuCommand::$command, '')],
+            [
+                array(Back::getTitle('ru'), Back::$command, ''),
+                array("Подтвердить", AwaitFeatures::$command, '')
+            ],
         ]);
 
         $text = implode("\n", [
