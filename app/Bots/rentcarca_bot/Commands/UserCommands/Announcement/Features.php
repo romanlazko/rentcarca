@@ -31,8 +31,10 @@ class Features extends Command
 
         $buttons = BotApi::inlineCheckbox([
             ...$buttons,
-            [array("Подтвердить", AwaitFeatures::$command, '')],
-            [array(Back::getTitle('ru'), Back::$command, '')],
+            [
+                array(Back::getTitle('ru'), Back::$command, ''),
+                array("Подтвердить", AwaitFeatures::$command, '')
+            ],
             [array(MenuCommand::getTitle('ru'), MenuCommand::$command, '')],
         ], 'features');
 

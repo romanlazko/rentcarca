@@ -26,8 +26,10 @@ class City extends Command
         $updates->getFrom()->setExpectation(AwaitCity::$expectation);
 
         $buttons = BotApi::inlineKeyboard([
-            [array(Back::getTitle('ru'), Back::$command, '')],
-            [array(MenuCommand::getTitle('ru'), MenuCommand::$command, '')],
+            [
+                array(Back::getTitle('ru'), Back::$command, ''),
+                array(MenuCommand::getTitle('ru'), MenuCommand::$command, '')
+            ],
         ]);
 
         $text = implode("\n", [
