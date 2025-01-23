@@ -41,7 +41,7 @@ class Back extends Command
 
         foreach ($steps as $step => $command) {
             if (!isset($notes[$step]) OR empty($notes[$step])) {
-                $this->bot->executeCommand(StepBack::$command);
+                return $this->bot->executeCommand(StepBack::$command);
             }
         }
 
